@@ -21,6 +21,8 @@ app.use("/api/user", require("./routes/user"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/tasks", require("./routes/tasks"));
 
+app.get("/", (res) => res.send("API RUNNING"));
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
