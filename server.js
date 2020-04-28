@@ -14,11 +14,16 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Methods", "PUT, POST, DELETE, GET");
     return res.status(200).json({});
   }
+  next();
 });
 
 app.use("/api/user", require("./routes/user"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/tasks", require("./routes/tasks"));
+
+app.get("/", (req, res) => {
+  res.send("API Running");
+});
 
 const PORT = process.env.PORT || 8000;
 
