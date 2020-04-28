@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://finn:finn123@natours-70kxd.mongodb.net/semoto?retryWrites=true&w=majority",
+    "jwtSecret": "xa21qAB"
+}
