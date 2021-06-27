@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://finn:finn123@natours-70kxd.mongodb.net/semoto?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://finn123:finn123@cluster0.kamzs.mongodb.net/mern-task-app?retryWrites=true&w=majority",
     "jwtSecret": "xa21qAB"
 }
