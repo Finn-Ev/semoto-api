@@ -7,15 +7,15 @@ connectDB();
 
 app.use(express.json());
 
-// app.use((req, res, next) => {
-//   res.header("Access-Controll-Allow-Origin", "*");
-//   res.header("Access-Controll-Allow-Headers", "*");
-//   if (req.method === "OPTIONS") {
-//     res.header("Access-Control-Allow-Methods", "PUT, POST, DELETE, GET");
-//     return res.status(200).json({});
-//   }
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header("Access-Controll-Allow-Origin", "*");
+  res.header("Access-Controll-Allow-Headers", "*");
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "PUT, POST, DELETE, GET");
+    return res.status(200).json({});
+  }
+  next();
+});
 
 app.use("/api/user", require("./routes/user"));
 app.use("/api/auth", require("./routes/auth"));
